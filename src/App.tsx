@@ -72,7 +72,7 @@ export default function CollegePortal() {
               placeholder="Register Number"
               value={registerNumber}
               onChange={(e) => setRegisterNumber(e.target.value)}
-              className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+              className="text-black bg-white border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
             />
             <input
               type="password"
@@ -80,7 +80,7 @@ export default function CollegePortal() {
               placeholder="Password"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+              className="text-black bg-white border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
             />
             <button
               type="submit"
