@@ -71,7 +71,7 @@ export default function CollegePortal() {
           <input
             type="password"
             name="password"
-            placeholder="Phone Number"
+            placeholder="Password"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
