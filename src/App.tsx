@@ -49,7 +49,11 @@ export default function CollegePortal() {
   };
 
   return (
-    <div className="flex items-center flex-col justify-center w-screen h-full">
+    <div className="flex items-center flex-col justify-start w-full min-h-screen overflow-x-hidden">
+      <div className="bg-yellow-200 text-yellow-800 text-center p-2 font-medium w-full">
+        🚧 This website is in testing phase. Features may change or break.
+      </div>
+
       <div className="container mx-auto p-4 max-w-md">
         <h2 className="text-2xl font-extrabold text-gray-800 text-center mb-4">CGPA Calculator</h2>
         <p className="text-md text-gray-600 text-center mb-6">
@@ -97,7 +101,7 @@ export default function CollegePortal() {
         )}
 
         {grades && (
-          <div className="mt-4 max-w-md mx-auto p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+          <div className="mt-8 max-w-md p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
             <h2 className="text-2xl font-semibold text-gray-800 text-center">Academic Performance</h2>
             <div className="mt-4 p-4 bg-blue-100 rounded-lg text-center">
               <p className="text-lg font-bold text-blue-700">Overall CGPA</p>
@@ -114,6 +118,13 @@ export default function CollegePortal() {
           </div>
         )}
       </div>
+
+      <p className="text-sm text-gray-500 text-center my-4">
+        Facing issues? Report to{" "}
+        <a href="mailto:samuelrajholyns@gmail.com" className="text-cyan-600 underline">
+          samuelrajholyns@gmail.com
+        </a>
+      </p>
     </div>
   );
 }
