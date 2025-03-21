@@ -55,43 +55,46 @@ export default function CollegePortal() {
       </div>
 
       <div className="container mx-auto p-4 max-w-md">
-        <h2 className="text-2xl font-extrabold text-gray-800 text-center mb-4">CGPA Calculator</h2>
-        <p className="text-md text-gray-600 text-center mb-6">
-          <strong>Instructions:</strong> Enter your IMS credentials  
-        </p>
-        <p className="text-sm text-red-500 text-center mb-4">
-          ⚠️ Note: Works only for RIT II-CSBS students
-        </p>
+        <div className="mt-8 max-w-md p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
 
-        <form className="space-y-3" onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
-          <input
-            type="text"
-            name="username"
-            placeholder="Register Number"
-            value={registerNumber}
-            onChange={(e) => setRegisterNumber(e.target.value)}
-            className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
-          />
-          <button
-            type="submit"
-            disabled={loading}
-            className={`w-full px-4 py-3 text-white font-semibold rounded-lg transition-all ${
-              loading
-                ? "bg-cyan-300 cursor-not-allowed"
-                : "bg-cyan-500 hover:bg-cyan-600"
-            }`}
-          >
-            {loading ? "Logging in..." : "Login"}
-          </button>
-        </form>
+          <h2 className="text-2xl font-extrabold text-gray-800 text-center mb-4">CGPA Calculator</h2>
+          <p className="text-md text-gray-600 text-center mb-6">
+            <strong>Instructions:</strong> Enter your IMS credentials  
+          </p>
+          <p className="text-sm text-red-500 text-center mb-4">
+            ⚠️ Note: Works only for RIT II-CSBS students
+          </p>
+
+          <form className="space-y-3" onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+            <input
+              type="text"
+              name="username"
+              placeholder="Register Number"
+              value={registerNumber}
+              onChange={(e) => setRegisterNumber(e.target.value)}
+              className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              className="border border-gray-300 p-3 w-full rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className={`w-full px-4 py-3 text-white font-semibold rounded-lg transition-all ${
+                loading
+                  ? "bg-cyan-300 cursor-not-allowed"
+                  : "bg-cyan-500 hover:bg-cyan-600"
+              }`}
+            >
+              {loading ? "Logging in..." : "Login"}
+            </button>
+          </form>
+        </div>
 
         {error !== "" && <p className="text-red-500 mt-2">{error}</p>}
         {loading && (
@@ -119,9 +122,9 @@ export default function CollegePortal() {
         )}
       </div>
 
-      <p className="text-sm text-gray-500 text-center my-4">
+      <p className="text-sm text-white text-center my-4">
         Facing issues? Report to{" "}
-        <a href="mailto:samuelrajholyns@gmail.com" className="text-cyan-600 underline">
+        <a href="mailto:samuelrajholyns@gmail.com" className="text-cyan-100 underline">
           samuelrajholyns@gmail.com
         </a>
       </p>
