@@ -96,7 +96,12 @@ export default function CollegePortal() {
           </form>
         </div>
 
-        {error !== "" && <p className="text-red-500 mt-2">{error}</p>}
+        {error !== "" && (
+          <div className="mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded-md text-sm flex items-center justify-center">
+            <span>❌ {error}</span>
+          </div>
+        )}
+
         {loading && (
           <div className="flex justify-center items-center mt-4">
             <span className="loader"></span>
@@ -124,7 +129,7 @@ export default function CollegePortal() {
 
       <p className="text-sm text-white text-center my-4">
         Facing issues? Report to{" "}
-        <a href="mailto:samuelrajholyns@gmail.com" className="text-cyan-100 underline">
+        <a href="mailto:samuelrajholyns@gmail.com" className="underline">
           samuelrajholyns@gmail.com
         </a>
       </p>
