@@ -48,12 +48,6 @@ export default function CollegePortal() {
     setLoading(false);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && !loading) {
-      handleLogin();
-    }
-  };
-
   return (
     <div className="flex items-center flex-col justify-center w-screen h-full">
       <div className="container mx-auto p-4 max-w-md">
