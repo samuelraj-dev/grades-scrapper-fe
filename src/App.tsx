@@ -51,7 +51,7 @@ export default function CollegePortal() {
   return (
     <div className="flex items-center flex-col justify-start w-full min-h-screen overflow-x-hidden">
       <div className="bg-yellow-200 text-yellow-800 text-center p-2 font-medium w-full">
-        🚧 This website is in testing phase. Features may change or break.
+        🚧 This app is in testing phase. Features may change or break.
       </div>
 
       <div className="container mx-auto p-4 max-w-md">
