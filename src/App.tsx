@@ -2,11 +2,20 @@ import { useState } from "react";
 import axios from "axios";
 import './App.css'
 
-const BASE_URL = 'https://rit-grades-scrapper-nd7cw.ondigitalocean.app';
+// const BASE_URL = 'https://rit-grades-scrapper-nd7cw.ondigitalocean.app';
+const BASE_URL = 'http://127.0.0.1:5000';
 
 type GradesData = {
   CGPA: number;
   grades: Record<string, { GPA: number }>;
+};
+
+type ErrorResponse = {
+  response?: {
+    data?: {
+      error?: string;
+    };
+  };
 };
 
 export default function CollegePortal() {
@@ -23,8 +32,8 @@ export default function CollegePortal() {
       const response = await axios.get(`${BASE_URL}/api/get_grades`, { withCredentials: true });
       setGrades(response.data);
     } catch (err) {
-      setError("Failed to fetch grades. Please log in again.");
-      console.log(err);
+      setError((err as ErrorResponse)?.response?.data?.error || "Something went wrong. Please try later.");
+      // console.log(err);
     }
     // setLoading(false);
   };
@@ -41,8 +50,8 @@ export default function CollegePortal() {
       );
       await fetchGrades();
     } catch (err) {
-      console.log(err)
-      setError("Login failed. Please check your details.");
+      // console.log(err.response.data)
+      setError((err as ErrorResponse)?.response?.data?.error || "Something went wrong. Please try later.");
     }
     setPhoneNumber("")
     setLoading(false);
