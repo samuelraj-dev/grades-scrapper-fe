@@ -2,8 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import './App.css'
 
-// const BASE_URL = 'https://rit-grades-scrapper-nd7cw.ondigitalocean.app';
-const BASE_URL = 'http://127.0.0.1:5000';
+const BASE_URL = 'https://rit-grades-scrapper-nd7cw.ondigitalocean.app';
+// const BASE_URL = 'http://127.0.0.1:5000';
 
 type GradesData = {
   CGPA: number;
